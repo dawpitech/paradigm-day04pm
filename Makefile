@@ -30,6 +30,7 @@ SRC	+=	./generic_list.c
 SRC	+=	./generic_list2.c
 SRC	+=	./generic_list3.c
 SRC	+=	./stack.c
+SRC	+=	./stack2.c
 SRC	+=	./queue.c
 SRC	+=	./queue2.c
 
