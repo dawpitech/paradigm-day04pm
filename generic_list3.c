@@ -5,8 +5,9 @@
 ** generic_list3.c
 */
 
-#include <list.h>
 #include <stdlib.h>
+
+#include "list.h"
 
 bool list_add_elem_at_position(list_t **front_ptr, void *elem,
     unsigned int position)

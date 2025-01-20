@@ -7,7 +7,6 @@
 
 #include "map.h"
 
-#include <int_list.h>
 #include <stdlib.h>
 
 unsigned int map_get_size(map_t *map)
