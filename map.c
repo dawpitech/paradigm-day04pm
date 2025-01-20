@@ -44,7 +44,7 @@ bool map_del_elem(map_t **map_ptr, void *key, key_comparator_t key_cmp)
 
     if (key == NULL || map_ptr == NULL || *map_ptr == NULL)
         return false;
-    for (int i = 0; i < map_get_size(*map_ptr); i++) {
+    for (int i = 0; i < (int) map_get_size(*map_ptr); i++) {
         pair = list_get_elem_at_position(*map_ptr, i);
         if (key_cmp(key, pair->key) == 0) {
             free(pair);
