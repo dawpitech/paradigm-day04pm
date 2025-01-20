@@ -33,6 +33,8 @@ SRC	+=	./stack.c
 SRC	+=	./stack2.c
 SRC	+=	./queue.c
 SRC	+=	./queue2.c
+SRC	+=	./map.c
+SRC	+=	./map2.c
 
 OBJ	=	$(SRC:%.c=$(BDIR)/%.o)
 
