@@ -24,6 +24,7 @@ NAME	=	test
 SRC	=	./bonus/test.c
 SRC	+=	./int_list.c
 SRC	+=	./int_list2.c
+SRC	+=	./int_list3.c
 
 OBJ	=	$(SRC:%.c=$(BDIR)/%.o)
 
