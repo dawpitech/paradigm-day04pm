@@ -30,6 +30,8 @@ SRC	+=	./generic_list.c
 SRC	+=	./generic_list2.c
 SRC	+=	./generic_list3.c
 SRC	+=	./stack.c
+SRC	+=	./queue.c
+SRC	+=	./queue2.c
 
 OBJ	=	$(SRC:%.c=$(BDIR)/%.o)
 

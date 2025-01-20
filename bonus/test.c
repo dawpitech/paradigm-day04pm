@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-#include "stack.h"
+#include "queue.h"
 
 int main(void)
 {
-    stack_t* stack = NULL;
+    queue_t* queue = NULL;
     int i = 5;
     int j = 4;
     int* data = NULL;
-    stack_push(&stack, &i);
-    stack_push(&stack, &j);
-    data = (int*)stack_top(stack);
+    queue_push(&queue, &i);
+    queue_push(&queue, &j);
+    data = (int*)queue_front(queue);
     printf("%d\n", *data);
-    stack_clear(&stack);
+    queue_clear(&queue);
     return (0);
 }
