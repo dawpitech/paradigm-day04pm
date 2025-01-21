@@ -36,7 +36,7 @@ bool list_del_elem_at_front(list_t **front_ptr)
 
 bool list_del_elem_at_back(list_t **front_ptr)
 {
-    if (front_ptr == NULL)
+    if (front_ptr == NULL || *front_ptr == NULL)
         return false;
     if ((*front_ptr)->next == NULL) {
         *front_ptr = NULL;

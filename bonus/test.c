@@ -14,7 +14,7 @@ int main(void)
     int_list_add_elem_at_position(&list_head, 4, 3);
     int_list_dump(list_head);
     printf("---\n");
-    int_list_del_elem_at_position(&empty_list, 1);
+    int_list_del_elem_at_back(&empty_list);
     int_list_dump(list_head);
     int_list_clear(&list_head);
     return 0;

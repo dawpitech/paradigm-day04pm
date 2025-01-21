@@ -23,7 +23,7 @@ bool int_list_del_elem_at_front(int_list_t **front_ptr)
 
 bool int_list_del_elem_at_back(int_list_t **front_ptr)
 {
-    if (front_ptr == NULL)
+    if (front_ptr == NULL || *front_ptr == NULL)
         return false;
     if ((*front_ptr)->next == NULL) {
         *front_ptr = NULL;
