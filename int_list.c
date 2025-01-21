@@ -50,7 +50,7 @@ void int_list_clear(int_list_t **front_ptr)
 {
     if (front_ptr == NULL)
         return;
-    if ((*front_ptr)->next != NULL)
+    if (*front_ptr != NULL && (*front_ptr)->next != NULL)
         int_list_clear(&(*front_ptr)->next);
     free(*front_ptr);
     *front_ptr = NULL;

@@ -1,31 +1,18 @@
 #include <stdio.h>
 
-#include "map.h"
-
-int int_comparator(const void* first, const void* second)
-{
-    int val1 = *(const int*)first;
-    int val2 = *(const int*)second;
-    return (val1 - val2);
-}
+#include "int_list.h"
 
 int main(void)
 {
-    map_t* map = NULL;
-    int first_key = 1;
-    int second_key = 2;
-    int third_key = 3;
-    char* first_value = " first ";
-    char* first_value_rw = " first_rw ";
-    char* second_value = " second ";
-    char* third_value = " third ";
-    char** data = NULL;
-    map_add_elem(&map, &first_key, &first_value, &int_comparator);
-    map_add_elem(&map, &first_key, &first_value_rw, &int_comparator);
-    map_add_elem(&map, &second_key, &second_value, &int_comparator);
-    map_add_elem(&map, &third_key, &third_value, &int_comparator);
-    data = (char**)map_get_elem(map, &second_key, &int_comparator);
-    printf("The key [%d] maps to value [%s]\n", second_key, *data);
-    map_clear(&map);
-    return (0);
+    int_list_t* list_head = NULL;;
+    int_list_add_elem_at_back(&list_head, 2);
+    int_list_add_elem_at_back(&list_head, 3);
+    int_list_add_elem_at_front(&list_head, 1);
+    int_list_add_elem_at_back(&list_head, 5);
+    int_list_add_elem_at_position(&list_head, 4, 3);
+    int_list_dump(list_head);
+    printf("---\n");
+    int_list_dump(list_head);
+    int_list_clear(&list_head);
+    return 0;
 }
