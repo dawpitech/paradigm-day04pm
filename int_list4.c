@@ -39,7 +39,7 @@ bool int_list_del_elem_at_back(int_list_t **front_ptr)
 bool int_list_del_elem_at_position(int_list_t **front_ptr,
     unsigned int position)
 {
-    if (front_ptr == NULL)
+    if (front_ptr == NULL || *front_ptr == NULL)
         return false;
     if (position == 0)
         return int_list_del_elem_at_front(front_ptr);
